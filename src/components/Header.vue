@@ -1,6 +1,6 @@
 <template>
 <div class="header">
-  Mememe
+  <p>Gitair rank</p>
 </div>
 </template>
 
@@ -14,6 +14,6 @@ export default {
 .header {
   width: 100%;
   height: 50px;
-  background: red;
+  background: #5b69a5;
 }
 </style>
