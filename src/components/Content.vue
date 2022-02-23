@@ -37,6 +37,7 @@ export default {
       padding: 20px;
       color: white;
       border-radius: 6px;
+      font-size: 36px;
     
       &:last-child {
         margin-right: 0px;
