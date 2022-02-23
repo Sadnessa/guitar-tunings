@@ -1,12 +1,9 @@
 <template>
- <div class="content">
-  dsdssasa </div> 
+  <div class="content">dsdssasa</div>
 </template>
 
 <script>
-export default {
-  
-}
+export default {};
 </script>
 
 <style lang="scss" scoped>
