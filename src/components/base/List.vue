@@ -1,6 +1,6 @@
 <template>
   <div class="list">
-    <div class="list__item" v-for="item in items" :key="item">
+    <div class="list__item" v-for="item in items" :key="item" @click="$emit('update:modelValue', item)">
       {{ item }}
     </div>
   </div>

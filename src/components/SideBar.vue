@@ -1,6 +1,6 @@
 <template>
   <div class="sidebar">
-    <List :items="items"></List>
+    <List :items="items" @update:modelValue="$emit('update:modelValue', $event)"></List>
     </div>
 </template>
 
@@ -15,6 +15,10 @@ export default {
   props: {
     items: {
       type: Array,
+    },
+
+    modelValue: {
+      type: String,
     }
   }
 };
