@@ -25,7 +25,7 @@ export default {
         { name: "Dropped D", notes: ["D", "A", "D", "G", "B", "E"] },
         { name: "Dropped C", notes: ["C", "G", "C", "F", "A", "D"] },
       ],
-      activeListItem: "",
+      activeListItem: "Standart",
     };
   },
 

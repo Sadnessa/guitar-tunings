@@ -23,18 +23,20 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #d7dbf0;
+  background: #e5e9fd;
 
   .card {
     display: flex;
-    background: white;
+    background: #f4f6f7;
     padding: 10px;
     border-radius: 6px;
 
     &__item {
       margin-right: 10px;
-      background: gray;
+      background: #8384fb;
       padding: 20px;
+      color: white;
+      border-radius: 6px;
     
       &:last-child {
         margin-right: 0px;

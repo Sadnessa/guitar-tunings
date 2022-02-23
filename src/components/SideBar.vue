@@ -26,6 +26,6 @@ export default {
 
 <style lang="scss" scoped>
 .sidebar {
-  background: #afb0cf;
+  background: #f4f6f7;
 }
 </style>
