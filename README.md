@@ -1,7 +1,10 @@
-# Vue 3 + Vite
+# Guitar tunings
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+With [this site](https://sadnessa.github.io/guitar-tunings/) you can easily tune your guitar. </br>
 
-## Recommended IDE Setup
+![изображение](https://user-images.githubusercontent.com/67637329/155307013-b9dab02f-f35c-45d9-a2f3-768115cfeb4c.png)
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+## Features
+- [x] Simple to use.
+- [x] With this site you are able to switch between three tunes.
+- [ ] Custom themes.
