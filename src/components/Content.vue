@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <div class="card">
-      <div class="card__item" v-for="note in guitarNotes" :key="note">
+      <div class="card__item" v-for="(note, index) in guitarNotes" :key="index+note">
         {{ note }}
       </div>
     </div>

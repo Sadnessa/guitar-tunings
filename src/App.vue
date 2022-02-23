@@ -17,31 +17,35 @@ export default {
     SideBar,
     Content,
   },
-  
+
   data() {
     return {
-      guitarRank: [{ name: "1", notes: ["Мяу", "Мяу"] }, { name: "2", notes: ["Гаф", "Гаф"] }],
+      guitarRank: [
+        { name: "Standart", notes: ["E", "A", "D", "G", "B", "E"] },
+        { name: "Dropped D", notes: ["D", "A", "D", "G", "B", "E"] },
+        { name: "Dropped C", notes: ["C", "G", "C", "F", "A", "D"] },
+      ],
       activeListItem: "",
     };
   },
 
   computed: {
     listItems() {
-      let arrName = []
-      for(var i = 0; i < this.guitarRank.length; i++) {
-        arrName.push(this.guitarRank[i].name)
+      let arrName = [];
+      for (var i = 0; i < this.guitarRank.length; i++) {
+        arrName.push(this.guitarRank[i].name);
       }
       return arrName;
     },
 
     itemNotes() {
-      for(var i = 0; i < this.guitarRank.length; i++) {
-        if(this.activeListItem == this.guitarRank[i].name) {
-          return this.guitarRank[i].notes
+      for (var i = 0; i < this.guitarRank.length; i++) {
+        if (this.activeListItem == this.guitarRank[i].name) {
+          return this.guitarRank[i].notes;
         }
       }
-    }
-  },  
+    },
+  },
 };
 </script>
 
