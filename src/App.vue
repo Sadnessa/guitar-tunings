@@ -21,11 +21,11 @@ export default {
   data() {
     return {
       guitarRank: [
-        { name: "Standart", notes: ["E", "A", "D", "G", "B", "E"] },
+        { name: "Standard", notes: ["E", "A", "D", "G", "B", "E"] },
         { name: "Dropped D", notes: ["D", "A", "D", "G", "B", "E"] },
         { name: "Dropped C", notes: ["C", "G", "C", "F", "A", "D"] },
       ],
-      activeListItem: "Standart",
+      activeListItem: "Standard",
     };
   },
 
@@ -50,10 +50,13 @@ export default {
 </script>
 
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Permanent+Marker&family=Varela+Round&display=swap');
+
 #app {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  font-family: 'Varela Round', sans-serif;
 }
 
 body {

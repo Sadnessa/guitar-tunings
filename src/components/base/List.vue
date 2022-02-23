@@ -1,6 +1,12 @@
 <template>
   <div class="list">
-    <div class="list__item" v-for="item in items" :key="item" @click="$emit('update:modelValue', item)">
+    <div
+      class="list__item"
+      v-for="item in items"
+      :key="item"
+      @click="$emit('update:modelValue', item)"
+      :class="{ 'list__item--active': modelValue == item }"
+    >
       {{ item }}
     </div>
   </div>
@@ -12,13 +18,18 @@ export default {
     items: {
       type: Array,
     },
+
+    modelValue: {
+      type: String,
+    },
   },
 };
 </script>
 
 <style lang="scss" scoped>
-$gradient-border-color: #35368f;
+$gradient-border-color: #6567d4;
 $gradient-hover-color: #8385fb52;
+$gradient-active-color: #8385fb52;
 
 .list {
   &__item {
@@ -26,6 +37,7 @@ $gradient-hover-color: #8385fb52;
     padding: 16px 32px 10px 32px;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
+    color: #313131;
 
     &::after {
       position: absolute;
@@ -43,7 +55,7 @@ $gradient-hover-color: #8385fb52;
         $gradient-border-color 70%,
         rgba(0, 0, 0, 0) 100%
       );
-      opacity: 0.5;
+      opacity: 0.3;
     }
 
     &::before {
@@ -67,8 +79,19 @@ $gradient-hover-color: #8385fb52;
 
     &:hover {
       &::before {
-        opacity: 1;
+        opacity: 0.5;
       }
+    }
+
+    &--active {
+      background: linear-gradient(
+        90deg,
+        $gradient-active-color 0%,
+        $gradient-active-color 30%,
+        $gradient-active-color 50%,
+        $gradient-active-color 70%,
+        rgba(0, 0, 0, 0) 100%
+      );
 
     }
   }
