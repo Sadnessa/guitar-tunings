@@ -1,6 +1,12 @@
 <template>
   <div class="list">
-    <div class="list__item" v-for="item in items" :key="item">
+    <div
+      class="list__item"
+      v-for="item in items"
+      :key="item"
+      @click="$emit('update:modelValue', item)"
+      :class="{ 'list__item--active': modelValue == item }"
+    >
       {{ item }}
     </div>
   </div>
@@ -12,19 +18,26 @@ export default {
     items: {
       type: Array,
     },
+
+    modelValue: {
+      type: String,
+    },
   },
 };
 </script>
 
 <style lang="scss" scoped>
-$gradient-border-color: rgb(122, 122, 122);
-// $gradient-hover-color: rgba(255, 255, 255, 0.514);
+$gradient-border-color: #6567d4;
+$gradient-hover-color: #8385fb52;
+$gradient-active-color: #8385fb52;
 
 .list {
   &__item {
     position: relative;
     padding: 16px 32px 10px 32px;
     transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    color: #313131;
 
     &::after {
       position: absolute;
@@ -37,20 +50,49 @@ $gradient-border-color: rgb(122, 122, 122);
       background: linear-gradient(
         90deg,
         rgba(0, 0, 0, 0) 0%,
-        $gradient-border-color 20%,
+        $gradient-border-color 30%,
         $gradient-border-color 50%,
-        $gradient-border-color 80%,
+        $gradient-border-color 70%,
         rgba(0, 0, 0, 0) 100%
       );
+      opacity: 0.3;
+    }
+
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      content: "";
+      background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0) 0%,
+        $gradient-hover-color 20%,
+        $gradient-hover-color 50%,
+        $gradient-hover-color 80%,
+        rgba(0, 0, 0, 0) 100%
+      );
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
     }
 
     &:hover {
-      // background: linear-gradient(180deg, rgba(0,0,0,0) 0%, $gradient-hover-color 20%,  $gradient-hover-color 70%, rgba(0,0,0,0) 100%);
-      background: rgba(255, 255, 255, 0.438);
-
-      &::after {
-        height: 0px;
+      &::before {
+        opacity: 0.5;
       }
+    }
+
+    &--active {
+      background: linear-gradient(
+        90deg,
+        $gradient-active-color 0%,
+        $gradient-active-color 30%,
+        $gradient-active-color 50%,
+        $gradient-active-color 70%,
+        rgba(0, 0, 0, 0) 100%
+      );
+
     }
   }
 }
