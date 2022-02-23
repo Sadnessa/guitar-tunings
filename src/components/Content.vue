@@ -26,7 +26,20 @@ export default {
   background: #d7dbf0;
 
   .card {
+    display: flex;
     background: white;
+    padding: 10px;
+    border-radius: 6px;
+
+    &__item {
+      margin-right: 10px;
+      background: gray;
+      padding: 20px;
+    
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
   }
 }
 </style>
